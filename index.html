@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://kit.fontawesome.com/37e6ce0705.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="assets/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div class="wrapper">
+                <div class="new-todo">
+                    <input
+                        v-model="newTodo"
+                        @keyup.enter="addTodo"
+                        >
+                </div>
+                <div class="todo-list">
+                    <ul id="lista">
+                        <li v-for="(oggetto, indice) in todo" @click="rimuovi_todo(oggetto)">
+                            {{oggetto}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="assets/main.js" charset="utf-8"></script>
+    </body>
+</html>
