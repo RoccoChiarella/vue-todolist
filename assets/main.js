@@ -4,7 +4,7 @@ var app = new Vue(
     {
         el: '#root',
         data: {
-            newTodo: '',
+            nuovoTodo: '',
             indice: 0,
             todo: [
                 "Affettati",
@@ -13,9 +13,8 @@ var app = new Vue(
             ]
         },
         methods: {
-            addTodo: function () {
-
-                var value = this.newTodo && this.newTodo.trim();
+            aggiungiTodo: function () {
+                var value = this.nuovoTodo && this.nuovoTodo.trim();
 
                 if (!value) {
                     return;
@@ -23,11 +22,10 @@ var app = new Vue(
 
                 this.todo.push(value);
 
-                this.newTodo = "";
+                this.nuovoTodo = "";
             },
-            rimuovi_todo: function (todo) {
-                console.log(todo);
-                this.todo.slice(this.todo.indexOf(todo), 1);
+            rimuoviTodo: function (todo) {
+                this.todo.splice(this.todo.indexOf(todo), 1);
             }
         }
     }

@@ -10,15 +10,15 @@
     <body>
         <div id="root">
             <div class="wrapper">
-                <div class="new-todo">
+                <div class="nuovoTodo">
                     <input
-                        v-model="newTodo"
-                        @keyup.enter="addTodo"
+                        v-model="nuovoTodo"
+                        @keyup.enter="aggiungiTodo"
                         >
                 </div>
                 <div class="todo-list">
                     <ul id="lista">
-                        <li v-for="(oggetto, indice) in todo" @click="rimuovi_todo(oggetto)">
+                        <li v-for="(oggetto, indice) in todo" @click="rimuoviTodo(oggetto)">
                             {{oggetto}}
                         </li>
                     </ul>
